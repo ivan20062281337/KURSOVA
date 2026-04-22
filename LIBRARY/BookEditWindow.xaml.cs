@@ -1,18 +1,6 @@
 ﻿using LIBRARY.MODEL;
 using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using static LIBRARY.MODEL.DbItems;
 
 namespace LIBRARY
@@ -25,7 +13,7 @@ namespace LIBRARY
         private Book _currentBook;
         private LibraryRepository _repo = new LibraryRepository();
 
-        // Конструктор для додавання (book == null) або редагування
+        // ДОДАВАННЯ (book == null) АБО РЕДАГУВАННЯ
         public BookEditWindow(Book book = null)
         {
             InitializeComponent();
@@ -49,9 +37,9 @@ namespace LIBRARY
         private void FillFields()
         {
             txtTitle.Text = _currentBook.title;
-            txtIsbn.Text = _currentBook.isbn; // Додай isbn у клас Book
+            txtIsbn.Text = _currentBook.isbn;
             txtQty.Text = _currentBook.quantity.ToString();
-            cbAuthors.SelectedValue = _currentBook.author_id; // Додай ці ID у клас Book
+            cbAuthors.SelectedValue = _currentBook.author_id;
             cbCategories.SelectedValue = _currentBook.category_id;
         }
 
@@ -86,7 +74,7 @@ namespace LIBRARY
             }
             catch (MySqlException ex)
             {
-                //ЯКЩО НЕМАЄ ДОСТУПУ ВИВОДИМО ЦЕ НА ЕКРАН
+                //ЯКШО НЕМА ДОСТУПУ ВИВОДИМО ЦЕ НА ЕКРАН
                 MessageBox.Show("Помилка доступу до бази даних: " + ex.Message, "Відмовлено в доступі", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)

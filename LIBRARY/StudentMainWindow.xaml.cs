@@ -4,9 +4,6 @@ using static LIBRARY.MODEL.DbItems;
 
 namespace LIBRARY
 {
-    /// <summary>
-    /// Interaction logic for StudentMainWindow.xaml
-    /// </summary>
     public partial class StudentMainWindow : Window
     {
         private Student _currentStudent;

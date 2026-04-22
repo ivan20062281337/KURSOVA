@@ -4,9 +4,6 @@ using System.Windows;
 
 namespace LIBRARY
 {
-    /// <summary>
-    /// Interaction logic for StaffLoginWindow.xaml
-    /// </summary>
     public partial class StaffLoginWindow : Window
     {
         public StaffLoginWindow()

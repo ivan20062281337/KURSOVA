@@ -1,6 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
-using System.Data.Common;
 using static LIBRARY.MODEL.DbItems;
 
 namespace LIBRARY.MODEL
@@ -191,9 +190,7 @@ namespace LIBRARY.MODEL
                 conn.Open();
                 using (var cmd = new MySqlCommand("add_new_book", conn))
                 {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-                    // Додаємо параметри відповідно до твоєї процедури
+                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@p_title", title);
                     cmd.Parameters.AddWithValue("@p_author_id", authorId);
                     cmd.Parameters.AddWithValue("@p_cat_id", catId);
