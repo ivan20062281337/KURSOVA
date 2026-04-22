@@ -1,0 +1,29 @@
+﻿<Window x:Class="LIBRARY.BookEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LIBRARY"
+        mc:Ignorable="d"
+        Title="Редагування книги" Height="400" Width="350">
+    <StackPanel Margin="20">
+        <TextBlock x:Name="lblHeader" Text="Додати нову книгу" FontSize="16" Margin="0,0,0,15" FontWeight="Bold"/>
+
+        <TextBlock Text="Назва книги:"/>
+        <TextBox x:Name="txtTitle" Margin="0,5"/>
+
+        <TextBlock Text="Автор:"/>
+        <ComboBox x:Name="cbAuthors" DisplayMemberPath="name" SelectedValuePath="author_id" Margin="0,5"/>
+
+        <TextBlock Text="Категорія:"/>
+        <ComboBox x:Name="cbCategories" DisplayMemberPath="name" SelectedValuePath="category_id" Margin="0,5"/>
+
+        <TextBlock Text="ISBN:"/>
+        <TextBox x:Name="txtIsbn" Margin="0,5"/>
+
+        <TextBlock Text="Кількість:"/>
+        <TextBox x:Name="txtQty" Margin="0,5,0,15"/>
+
+        <Button x:Name="btnSave" Content="Зберегти" Click="Save_Click" Height="35" Background="LightBlue"/>
+    </StackPanel>
+</Window>

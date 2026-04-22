@@ -1,0 +1,18 @@
+﻿<Window x:Class="LIBRARY.StudentLoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LIBRARY"
+        mc:Ignorable="d"
+        Title="Вхід для студента" Height="250" Width="300" WindowStartupLocation="CenterScreen">
+        <StackPanel Margin ="20" VerticalAlignment="Center">
+        <TextBlock Text="Електронна пошта:" Margin="0,0,0,5"/>
+        <TextBox x:Name="txtEmail" Margin="0,0,0,10" Height="25"/>
+
+        <TextBlock Text="Номер квитка (ID):" Margin="0,0,0,5"/>
+        <TextBox x:Name="txtTicket" Margin="0,0,0,20" Height="25"/>
+
+        <Button Content="Увійти" Click="btnLogin_Click" Height="35" Background="#4CAF50" Foreground="White"/>
+    </StackPanel>
+</Window>
